@@ -1,0 +1,164 @@
+/* ============================================
+   VARIABLES.CSS - Global CSS Variables
+   ============================================ */
+
+:root {
+    /* Primary Colors */
+    --primary-color: #FF6B35;
+    --primary-light: #FF8C42;
+    --primary-dark: #E55100;
+    
+    /* Secondary Colors */
+    --secondary-color: #004E89;
+    --secondary-light: #1B6CA8;
+    --secondary-dark: #003D70;
+    
+    /* Accent Colors */
+    --accent-color: #9B59B6;
+    --accent-light: #AF7AC5;
+    --accent-dark: #7D3C98;
+    
+    /* Success Colors */
+    --success-color: #27AE60;
+    --success-light: #2ECC71;
+    --success-dark: #229954;
+    
+    /* Warning Colors */
+    --warning-color: #F39C12;
+    --warning-light: #F1C40F;
+    --warning-dark: #D68910;
+    
+    /* Error Colors */
+    --error-color: #E74C3C;
+    --error-light: #EC7063;
+    --error-dark: #C0392B;
+    
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray-50: #F8F9FA;
+    --gray-100: #F0F2F5;
+    --gray-200: #E4E6EB;
+    --gray-300: #CED0D4;
+    --gray-400: #BCC0C4;
+    --gray-500: #65676B;
+    --gray-600: #50585F;
+    --gray-700: #3A3F47;
+    --gray-800: #1C1E21;
+    --gray-900: #0A0E27;
+    
+    /* Background Colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-tertiary: #EEEFF5;
+    
+    /* Text Colors */
+    --text-primary: #1C1E21;
+    --text-secondary: #65676B;
+    --text-tertiary: #8A8D91;
+    
+    /* Borders */
+    --border-color: #E4E6EB;
+    --border-light: #F0F2F5;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+    
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-lg: 16px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+    --space-3xl: 48px;
+    --space-4xl: 64px;
+    
+    /* Border Radius */
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+    
+    /* Typography */
+    --font-family-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-family-mono: 'SFMono-Regular', 'Roboto Mono', 'Courier New', monospace;
+    
+    /* Font Sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 30px;
+    --font-size-4xl: 36px;
+    --font-size-5xl: 48px;
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    --line-height-loose: 2;
+    
+    /* Transitions */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Z-Index Scale */
+    --z-index-hide: -1;
+    --z-index-base: 0;
+    --z-index-dropdown: 100;
+    --z-index-sticky: 500;
+    --z-index-fixed: 1000;
+    --z-index-modal-backdrop: 1040;
+    --z-index-modal: 1050;
+    --z-index-popover: 1060;
+    --z-index-tooltip: 1070;
+    
+    /* Container Widths */
+    --container-width-sm: 540px;
+    --container-width-md: 720px;
+    --container-width-lg: 960px;
+    --container-width-xl: 1140px;
+    --container-width-2xl: 1320px;
+    
+    /* Breakpoints */
+    --breakpoint-xs: 320px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+}
+
+/* Dark Mode Variables */
+html[data-theme="dark"] {
+    --bg-primary: #0A0E27;
+    --bg-secondary: #1C1E21;
+    --bg-tertiary: #2A2D33;
+    
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B3B9;
+    --text-tertiary: #8A8D91;
+    
+    --border-color: #3A3F47;
+    --border-light: #2A2D33;
+}
