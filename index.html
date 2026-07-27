@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SwiftMart - Shop Smart. Delivered Fast. Premium e-commerce platform">
+    <meta name="theme-color" content="#FF6B35">
+    <title>SwiftMart - Shop Smart. Delivered Fast.</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dark-theme.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">SwiftMart</span>
+                </a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="navbar-search">
+                <input type="text" class="search-input" id="navSearch" placeholder="Search products...">
+                <button class="search-btn">
+                    <span>🔍</span>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Right Icons -->
+            <div class="navbar-actions">
+                <!-- Dark Mode Toggle -->
+                <button class="icon-btn" id="darkModeToggle" title="Toggle Dark Mode">
+                    <span class="icon">🌙</span>
+                </button>
+
+                <!-- Wishlist -->
+                <a href="wishlist.html" class="icon-btn" title="Wishlist">
+                    <span class="icon">❤️</span>
+                    <span class="badge" id="wishlistCount">0</span>
+                </a>
+
+                <!-- Cart -->
+                <a href="cart.html" class="icon-btn" title="Shopping Cart">
+                    <span class="icon">🛒</span>
+                    <span class="badge" id="cartCount">0</span>
+                </a>
+
+                <!-- Account -->
+                <a href="login.html" class="icon-btn" id="accountBtn" title="Account">
+                    <span class="icon">👤</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="shop.html" class="mobile-link">Shop</a>
+            <a href="categories.html" class="mobile-link">Categories</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+            <a href="login.html" class="mobile-link">Login</a>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slide active" style="background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);">
+                    <div class="slide-content">
+                        <h1>Summer Collection 2024</h1>
+                        <p>Get up to 50% off on selected items</p>
+                        <a href="shop.html" class="cta-button">Shop Now</a>
+                    </div>
+                    <div class="slide-image">🛍️</div>
+                </div>
+                <div class="slide" style="background: linear-gradient(135deg, #004E89 0%, #1B6CA8 100%);">
+                    <div class="slide-content">
+                        <h1>New Arrivals</h1>
+                        <p>Discover the latest trends and styles</p>
+                        <a href="shop.html" class="cta-button">Explore Now</a>
+                    </div>
+                    <div class="slide-image">✨</div>
+                </div>
+                <div class="slide" style="background: linear-gradient(135deg, #9B59B6 0%, #AF7AC5 100%);">
+                    <div class="slide-content">
+                        <h1>Premium Quality</h1>
+                        <p>Best prices guaranteed on all products</p>
+                        <a href="shop.html" class="cta-button">View Products</a>
+                    </div>
+                    <div class="slide-image">👑</div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="slider-btn prev" id="prevSlide">❮</button>
+            <button class="slider-btn next" id="nextSlide">❯</button>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <a href="shop.html?category=electronics" class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3>Electronics</h3>
+                    <p>Latest gadgets</p>
+                </a>
+                <a href="shop.html?category=fashion" class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3>Fashion</h3>
+                    <p>Trendy styles</p>
+                </a>
+                <a href="shop.html?category=home" class="category-card">
+                    <div class="category-icon">🏠</div>
+                    <h3>Home & Living</h3>
+                    <p>Comfort items</p>
+                </a>
+                <a href="shop.html?category=sports" class="category-card">
+                    <div class="category-icon">⚽</div>
+                    <h3>Sports</h3>
+                    <p>Active wear</p>
+                </a>
+                <a href="shop.html?category=books" class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h3>Books</h3>
+                    <p>Knowledge hub</p>
+                </a>
+                <a href="shop.html?category=beauty" class="category-card">
+                    <div class="category-icon">💄</div>
+                    <h3>Beauty</h3>
+                    <p>Self care</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">⚡ Flash Sale</h2>
+                <a href="shop.html?sort=discount" class="view-all">View All →</a>
+            </div>
+            <div class="products-grid" id="flashSaleProducts">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <a href="shop.html" class="view-all">View All →</a>
+            </div>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Best Sellers</h2>
+                <a href="shop.html?sort=bestseller" class="view-all">View All →</a>
+            </div>
+            <div class="products-grid" id="bestSellers">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">New Arrivals</h2>
+                <a href="shop.html?sort=newest" class="view-all">View All →</a>
+            </div>
+            <div class="products-grid" id="newArrivals">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products Section -->
+    <section class="trending-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trending Now</h2>
+                <a href="shop.html?sort=trending" class="view-all">View All →</a>
+            </div>
+            <div class="products-grid" id="trendingProducts">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="container">
+            <h2 class="section-title">Top Brands</h2>
+            <div class="brands-grid">
+                <div class="brand-logo">Apple</div>
+                <div class="brand-logo">Samsung</div>
+                <div class="brand-logo">Sony</div>
+                <div class="brand-logo">Nike</div>
+                <div class="brand-logo">Adidas</div>
+                <div class="brand-logo">Puma</div>
+                <div class="brand-logo">LG</div>
+                <div class="brand-logo">Philips</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Amazing shopping experience! Fast delivery and excellent customer service."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div>
+                            <h4>John Doe</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Best prices I've found online. The website is easy to navigate and secure."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div>
+                            <h4>Sarah Mitchell</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Wide variety of products and unbeatable deals. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div>
+                            <h4>Raj Kumar</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SwiftMart</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SwiftMart. All rights reserved. | Shop Smart. Delivered Fast.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utilities.js"></script>
+    <script src="assets/js/toast.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/local-storage.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/scroll-top.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
