@@ -1,0 +1,597 @@
+/* ============================================
+   RESPONSIVE.CSS - Responsive Design Rules
+   ============================================ */
+
+/* ============================================
+   EXTRA LARGE SCREENS (1400px+)
+   ============================================ */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .section-title {
+        font-size: var(--font-size-5xl);
+    }
+
+    h1 {
+        font-size: var(--font-size-6xl);
+    }
+}
+
+/* ============================================
+   LARGE SCREENS (1200px - 1399px)
+   ============================================ */
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   MEDIUM-LARGE SCREENS (992px - 1199px)
+   ============================================ */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* ============================================
+   TABLET SCREENS (768px - 991px)
+   ============================================ */
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        padding: 0 var(--space-lg);
+    }
+
+    section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-auto {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: var(--space-md);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Hide on tablet */
+    .hide-tablet {
+        display: none !important;
+    }
+
+    /* Show on tablet */
+    .show-tablet {
+        display: block !important;
+    }
+}
+
+/* ============================================
+   MOBILE SCREENS (576px - 767px)
+   ============================================ */
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+        padding: 0 var(--space-md);
+    }
+
+    section {
+        padding: var(--space-xl) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    p {
+        font-size: var(--font-size-sm);
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-auto {
+        grid-template-columns: 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Spacing */
+    .p-lg {
+        padding: var(--space-md) !important;
+    }
+
+    .m-lg {
+        margin: var(--space-md) !important;
+    }
+
+    /* Hide on mobile */
+    .hide-mobile {
+        display: none !important;
+    }
+
+    /* Show on mobile */
+    .show-mobile {
+        display: block !important;
+    }
+
+    /* Flexbox adjustments */
+    .flex-between {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
+    }
+
+    /* Button adjustments */
+    button, .btn {
+        width: 100%;
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .btn-sm {
+        width: 100%;
+    }
+
+    /* Form adjustments */
+    .form-group {
+        margin-bottom: var(--space-md);
+    }
+
+    /* Card adjustments */
+    .card {
+        padding: var(--space-lg);
+    }
+}
+
+/* ============================================
+   SMALL MOBILE SCREENS (< 576px)
+   ============================================ */
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 100%;
+        padding: 0 var(--space-md);
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        font-size: var(--font-size-sm);
+        line-height: var(--line-height-normal);
+    }
+
+    section {
+        padding: var(--space-lg) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-lg);
+    }
+
+    h3 {
+        font-size: var(--font-size-base);
+    }
+
+    h4, h5, h6 {
+        font-size: var(--font-size-sm);
+    }
+
+    /* All grids to single column */
+    .grid,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-auto {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Spacing adjustments */
+    .p-xl, .p-2xl {
+        padding: var(--space-md) !important;
+    }
+
+    .m-xl {
+        margin: var(--space-md) !important;
+    }
+
+    .gap-lg {
+        gap: var(--space-md) !important;
+    }
+
+    /* Typography adjustments */
+    .text-lg, .text-xl, .text-2xl {
+        font-size: var(--font-size-base);
+    }
+
+    /* Button adjustments */
+    button, .btn {
+        width: 100%;
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-sm);
+    }
+
+    .btn-lg {
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    /* Form adjustments */
+    input, textarea, select {
+        font-size: 16px; /* Prevent zoom on iOS */
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .form-group {
+        margin-bottom: var(--space-md);
+    }
+
+    /* Card adjustments */
+    .card {
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+    }
+
+    .card-header,
+    .card-footer {
+        padding: var(--space-md) 0;
+    }
+
+    /* Flexbox adjustments */
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .flex-between {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flex-center {
+        flex-direction: column;
+    }
+
+    /* Hide elements on small mobile */
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .show-mobile {
+        display: block !important;
+    }
+
+    /* Navbar adjustments */
+    .navbar-container {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    /* Modal/Overlay adjustments */
+    .modal, .overlay {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    /* Table adjustments */
+    table {
+        font-size: var(--font-size-xs);
+    }
+
+    th, td {
+        padding: var(--space-sm);
+    }
+
+    /* Truncate text on small screens */
+    .truncate {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .navbar, .footer {
+        display: none;
+    }
+
+    .page-break {
+        page-break-after: always;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ============================================
+   DARK MODE PREFERENCE
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: var(--gray-900);
+        --bg-secondary: var(--gray-800);
+        --text-primary: var(--white);
+        --text-secondary: var(--gray-300);
+        --text-tertiary: var(--gray-500);
+        --border-color: var(--gray-700);
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE
+   ============================================ */
+
+@media (prefers-contrast: more) {
+    * {
+        border-width: 2px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    button, .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION
+   ============================================ */
+
+@media (orientation: landscape) and (max-height: 500px) {
+    section {
+        padding: var(--space-lg) 0;
+    }
+
+    .hero-slider {
+        min-height: 250px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES FOR RESPONSIVE
+   ============================================ */
+
+/* Display utilities */
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+/* Visibility utilities */
+.visible-xs-block,
+.visible-sm-block,
+.visible-md-block,
+.visible-lg-block {
+    display: none !important;
+}
+
+@media (max-width: 576px) {
+    .visible-xs-block {
+        display: block !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .visible-sm-block {
+        display: block !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .visible-md-block {
+        display: block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .visible-lg-block {
+        display: block !important;
+    }
+}
+
+/* Width utilities */
+.w-100 {
+    width: 100% !important;
+}
+
+.w-75 {
+    width: 75% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.w-25 {
+    width: 25% !important;
+}
+
+.w-auto {
+    width: auto !important;
+}
+
+/* Height utilities */
+.h-100 {
+    height: 100% !important;
+}
+
+.h-auto {
+    height: auto !important;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
