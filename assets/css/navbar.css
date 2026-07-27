@@ -1,0 +1,328 @@
+/* ============================================
+   NAVBAR.CSS - Navigation Bar Styles
+   ============================================ */
+
+.navbar {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-sticky);
+    box-shadow: var(--shadow-sm);
+    transition: background-color var(--transition-normal) var(--transition-timing);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--container-width-2xl);
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-lg);
+    gap: var(--space-xl);
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+
+.navbar-logo {
+    flex-shrink: 0;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    transition: all var(--transition-fast) var(--transition-timing);
+}
+
+.logo-icon {
+    font-size: var(--font-size-2xl);
+    display: block;
+}
+
+.logo-text {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.logo-link:hover .logo-text {
+    color: var(--primary-dark);
+}
+
+/* ============================================
+   SEARCH BAR
+   ============================================ */
+
+.navbar-search {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: var(--space-sm) var(--space-lg);
+    transition: all var(--transition-fast) var(--transition-timing);
+}
+
+.navbar-search:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+}
+
+.search-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    font-size: var(--font-size-lg);
+    transition: color var(--transition-fast) var(--transition-timing);
+}
+
+.search-btn:hover {
+    color: var(--primary-color);
+}
+
+/* ============================================
+   NAVIGATION LINKS
+   ============================================ */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-md) 0;
+    position: relative;
+    transition: color var(--transition-fast) var(--transition-timing);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-normal) var(--transition-timing);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* ============================================
+   NAVBAR ACTIONS
+   ============================================ */
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    list-style: none;
+}
+
+.icon-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast) var(--transition-timing);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background-color: var(--bg-secondary);
+    color: var(--primary-color);
+}
+
+.icon {
+    font-size: var(--font-size-xl);
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--error-color);
+    color: var(--white);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+    padding: var(--space-sm);
+}
+
+.mobile-menu-toggle span {
+    width: 24px;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-normal) var(--transition-timing);
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================
+   MOBILE MENU
+   ============================================ */
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: var(--space-lg);
+    gap: var(--space-md);
+    z-index: var(--z-index-dropdown);
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-link {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast) var(--transition-timing);
+    display: block;
+}
+
+.mobile-link:hover {
+    background-color: var(--bg-secondary);
+    color: var(--primary-color);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 992px) {
+    .navbar-container {
+        gap: var(--space-lg);
+    }
+
+    .navbar-search {
+        max-width: 250px;
+    }
+
+    .navbar-links {
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        gap: var(--space-md);
+        padding: var(--space-sm) var(--space-lg);
+    }
+
+    .navbar-search {
+        display: none;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .navbar-actions {
+        gap: var(--space-md);
+    }
+
+    .icon {
+        font-size: var(--font-size-lg);
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-container {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .logo-text {
+        font-size: var(--font-size-lg);
+    }
+
+    .logo-icon {
+        font-size: var(--font-size-xl);
+    }
+
+    .navbar-actions {
+        gap: var(--space-sm);
+    }
+}
